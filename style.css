@@ -1,0 +1,563 @@
+/******************************************************************************
+START Glitch hello-app default styles
+
+The styles in this section do some minimal CSS resets, set default fonts and 
+colors, and handle the layout for our footer and "Remix on Glitch" button. If
+you're new to CSS they may seem a little complicated, but you can scroll down
+to this section's matching END comment to see page-specific styles.
+******************************************************************************/
+
+
+/* 
+  The style rules specify elements by type and by attributes such as class and ID
+  Each section indicates an element or elements, then lists the style properties to apply
+  See if you can cross-reference the rules in this file with the elements in index.html
+*/
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #69F7BE;  
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "HK Grotesk";
+  --font-family-header: "HK Grotesk";
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Import fonts */
+@font-face {
+  font-family: HK Grotesk;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Regular.otf?v=1603136326027")
+    format("opentype");
+}
+@font-face {
+  font-family: HK Grotesk;
+  font-weight: bold;
+  src: url("https://cdn.glitch.me/605e2a51-d45f-4d87-a285-9410ad350515%2FHKGrotesk-Bold.otf?v=1603136323437")
+    format("opentype");
+}
+
+/* Our remix on glitch button */
+.btn--remix {
+  font-family: HK Grotesk;
+  padding: 0.75rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1rem;
+  font-weight: 500;
+  height: 2.75rem;
+  align-items: center;
+  cursor: pointer;
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  margin-left: auto;
+}
+.btn--remix img {
+  margin-right: 0.5rem;
+}
+.btn--remix:hover {
+  background-color: #D0FFF1;
+}
+
+/* Navigation grid */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0.75rem 0;
+  width: 100%;
+  flex-wrap: wrap;
+  border-top: 4px solid #fff;
+}
+
+.footer a:not(.btn--remix):link,
+a:not(.btn--remix):visited {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  border-style: none;
+}
+.footer a:hover {
+  background: var(--color-primary);
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.divider {
+  padding: 0 1rem;
+}
+/******************************************************************************
+END Glitch hello-app default styles
+******************************************************************************/
+
+body {
+  font-family: helvetica, sans-serif;
+/*   font-weight: 300; */
+  margin: 2em;
+  width: 100%;
+  height: 100%;
+  color: #333333;
+  background-color:#fefefe；
+/*   background-color:rgb(251,248,242) ; /* rgb(252,250,251) */ */
+}
+
+h4 {/* 一级标题 */
+  color: #333333;
+  font-size: 50pt;
+/*   font-family:'Times New Roman', serif; */
+  font-family: Courier New, monospace;
+  font-weight: bold;
+  margin:0;
+}
+
+h1 {/* 二级标题 */
+  color: #333333;
+  font-size: 18pt;
+  font-family:'Times New Roman', serif;
+/*   font-weight: bold; */
+}
+.special-h2{
+  margin-top:0;
+}
+h2 {
+  font-size: 12pt;
+  font-weight:bold;
+  color:rgb(195,160,99);
+  margin:20px 5px 0 0;
+}
+
+h3 {/* 导航栏文字 */
+  color: #333333;
+  font-size: 16pt;
+/*   font-weight: normal; */
+/*   font-family:times,georgia; */
+  font-family: Courier New, monospace;
+  margin-top:0;
+}
+
+h3 a{
+  color: #333333;
+  text-decoration: none;
+}
+
+h3 a:hover,a:active{
+  color: rgb(195,160,99);
+  text-decoration: none;
+}
+
+button {
+  font-family: helvetica, sans-serif;;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  width: 100%;
+  /*   text-align: center; */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 30px 2px;
+  cursor: pointer;
+}
+
+p {
+  font-size: 12pt;
+  line-height: 18pt;
+}
+
+.left {
+  width: 15%;
+  padding: 1% 1% 1% 0;
+  float: left;
+  display: inline-block;
+  /*   background-color: red; */
+}
+
+.center {
+  width: 15%;
+  padding: 1%;
+  float: left;
+  display: inline-block;
+}
+
+.right {
+  width: 60%;
+  padding: 1%;
+  float: left;
+  display: inline-block;
+}
+
+.nav {
+  padding: 2%;
+  width: 16%;
+  height: 100%;
+  display: inline-block;
+  float: left;
+  /* --fixed position--*/
+  top: 0; 
+  left: 0;
+  position: fixed;
+  overflow-x: hidden;
+  border-right-style: solid;
+  border-width: 1px;
+/*   background-color:red; */
+  
+}
+
+.filter{
+  margin-bottom:50px;
+  width:100%;
+  height:50px;
+}
+
+.filter p{
+  width:auto;
+  border: 1px solid;
+  border-radius: 10px;
+  float:left;
+  margin-right:5px;
+  font-size: 10pt;
+  line-height: 20px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.filter p a{
+  color: #333333;
+  text-decoration: none; 
+}
+
+.filter p a:hover{
+  border-color:rgb(195,160,99);
+  color:rgb(195,160,99);
+  text-decoration: none; 
+}
+
+.navlist{
+/*   position:absolute; */
+  margin-top:70%;
+/*   background:yellow; */
+}
+.contact{
+/*   position:absolute; */
+  margin-top:90%;
+  height:300px;
+/*   background:yellow; */
+}
+
+
+.content100 {
+  margin-left: 15%;/* 空出导航栏的位置 */
+  padding: 2%;
+  width: 81%;
+  display: inline-block;
+  float: left;
+/*   background-color:yellow; */
+}
+
+.content60 {
+  margin-left: 15%;/* 空出导航栏的位置 */
+  padding: 2%;
+  width: 70%;
+  display: inline-block;
+  float: left;
+/*   background-color:yellow; */
+}
+
+hr{
+  margin-top:40px;
+  margin-bottom:40px;
+  width:100%;
+  border:2px dotted;
+  border-color:rgb(195,160,99);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  font-size: 10pt;
+  list-style-type: none;
+  padding-bottom: 2em;
+}
+
+li.bullet {
+  list-style-type: "- ";
+  margin: 1%;
+  padding: 0;
+}
+
+li.bullet a {
+  color: blue;
+}
+
+li a {
+  color: #333333;
+  text-decoration: none; 
+}
+
+li a:hover {
+  color: rgb(195,160,99);
+  text-decoration: none; 
+}
+
+iframe {
+  margin: 0;
+  padding: 0;
+  border: none;
+/*   width: 100%; */
+  /*   height: 400px; */
+  display: inline-block;
+  float: left;
+  margin-bottom: 2%;
+}
+
+.full-width-box {
+  width: 100%;
+  margin-bottom: 2%;
+  display: inline-block;
+  float: left;
+}
+
+img {
+  height: 400px;
+  display: inline-block;
+  float: left;
+  margin-bottom: 2%;
+  margin-right: 2%;
+}
+
+body .gist .gist-file {
+  margin-bottom: 0;
+  border: 1px dashed #adb5bd;
+  border-radius: 0;
+}
+
+body .gist .gist-data {
+  border-bottom: none;
+  border-radius: 0;
+  background-color: #f1f3f5;
+}
+
+body .gist .blob-wrapper {
+  border-radius: 0;
+}
+
+body .gist .highlight {
+  background-color: transparent;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+body .gist .highlight td {
+  padding: 5px 15px !important;
+  line-height: 1;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+body .gist tr:first-child td {
+  padding-top: 15px !important;
+}
+
+body .gist tr:last-child td {
+  padding-bottom: 15px !important;
+}
+
+body .gist .blob-num {
+  color: #ced4da;
+  background-color: #495057;
+  pointer-events: none;
+}
+
+body .gist .gist-meta {
+  display: none;
+}
+
+.nav-link {
+  font-size: 18px;
+  line-height: 27px;
+  cursor: pointer;
+}
+.nav-link a,
+.nav-link a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-family: Helvetica, sans-serif;;
+    margin: 1%;
+    width: 98%;
+    height: 100%;
+  }
+  .nav {
+    width: 100%;
+  }
+  .content {
+    width: 100%;
+    float: left;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.fullwidth {
+  width: 100%;
+  float: left;
+}
+
+.fullwidth img{
+  width:100%;
+  height:auto;
+}
+
+/* -----index----- */
+.gallery {
+  margin-left: 15%;/* 空出导航栏的位置 */
+  padding: 2%;
+  width: 70%;
+  display: inline-block;
+  float: left;
+/*   background-color:yellow; */
+}
+
+.gallerypic {
+  position:relative;
+  height:auto;
+  overflow:hidden;
+  color:#ffffff;
+  margin:20px 20px 50px 20px;
+  padding:5px;
+  object-fit:cover;
+  
+/*   background: red; */
+}
+
+.gallerytext{
+  position:absolute;
+  padding:10px 10px 0 0;
+  width:100%;
+  color:#ffffff;
+/*   height:50px; */
+/*   background-color: red; */
+}
+
+.gallerytext span{
+  width:auto;
+  border: 1px solid;
+  border-radius: 10px;
+  float:right;
+  margin-right:5px;
+  font-size: 10pt;
+  line-height: 20px;
+  padding-left:10px;
+  padding-right:10px;
+}
+
+.gallerypic  img{
+  margin-left:20px;
+  width:100%;
+  height:auto;
+  overflow:hidden;
+}
+
+.gallerypic  p{
+  position:absolute;
+  top:80px;
+  left:-90px;
+  transform:rotate(-90deg);
+  -ms-transform:rotate(-90deg); /* IE 9 */
+  -moz-transform:rotate(-90deg); /* Firefox */
+  -webkit-transform:rotate(-90deg); /* Safari 和 Chrome */
+  -o-transform:rotate(-90deg); /* Opera */
+/*   writing-mode: vertical-rl; */
+	font-size: 14px; 
+	line-height: 18px;
+  height:20px;
+  width:200px;
+  text-align:right;
+/*   background: yellow; */
+}
+
+.gallerypic a{
+  color: #333333;
+  text-decoration: none;
+}
+
+.gallerypic a:hover{
+  color: rgb(195,160,99);
+  text-decoration: none;
+}
+
+.gallerypic img:hover{
+  border-top:double;
+  border-bottom:double;
+  border-color: rgb(195,160,99);
+}
+
+.column{
+  width:47%;
+  float: left;
+  margin:0px 20px 0px 0px;
+}
+
+/* ----- 分栏 ------ */
+.column40{
+  width: 40%;
+  float: left;
+/*   background-color:red; */
+}
+.column60{
+  width: 60%;
+  float: left;
+/*   background-color:red; */
+}
+.column60 p{
+  margin:0px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
