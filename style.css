@@ -133,7 +133,7 @@ h4 {/* 一级标题 */
 h1 {/* 二级标题 */
   color: #333333;
   font-size: 18pt;
-  font-family:'Times New Roman', serif;
+  font-family:Courier New, monospace;
 /*   font-weight: bold; */
 }
 .special-h2{
