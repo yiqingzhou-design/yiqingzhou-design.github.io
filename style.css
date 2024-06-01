@@ -111,7 +111,7 @@ END Glitch hello-app default styles
 ******************************************************************************/
 
 body {
-  font-family: helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 /*   font-weight: 300; */
   margin: 2em;
   width: 100%;
